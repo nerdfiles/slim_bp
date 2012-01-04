@@ -1,0 +1,46 @@
+[04-Jan-2012 03:56:31] PHP Notice:  Use of undefined constant debug - assumed 'debug' in /Users/nerdfiles/Sites/slim_bp/index.php on line 11
+[04-Jan-2012 03:56:31] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/nerdfiles/Sites/slim_bp/index.php:11)' in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors('HTTP/1.1 404 No...')
+#1 /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php(1150): header()
+#2 /Users/nerdfiles/Sites/slim_bp/index.php(21): Slim->run()
+#3 {main}
+  thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
+[04-Jan-2012 03:56:50] PHP Notice:  Use of undefined constant debug - assumed 'debug' in /Users/nerdfiles/Sites/slim_bp/index.php on line 12
+[04-Jan-2012 03:56:50] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/nerdfiles/Sites/slim_bp/index.php:12)' in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors('HTTP/1.1 404 No...')
+#1 /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php(1150): header()
+#2 /Users/nerdfiles/Sites/slim_bp/index.php(22): Slim->run()
+#3 {main}
+  thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
+[04-Jan-2012 03:56:51] PHP Notice:  Use of undefined constant debug - assumed 'debug' in /Users/nerdfiles/Sites/slim_bp/index.php on line 12
+[04-Jan-2012 03:56:51] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/nerdfiles/Sites/slim_bp/index.php:12)' in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors('HTTP/1.1 404 No...')
+#1 /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php(1150): header()
+#2 /Users/nerdfiles/Sites/slim_bp/index.php(22): Slim->run()
+#3 {main}
+  thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
+[04-Jan-2012 03:59:22] PHP Fatal error:  Call to undefined function php_info() in /Users/nerdfiles/Sites/slim_bp/index.php on line 28
+[04-Jan-2012 03:59:27] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/nerdfiles/Sites/slim_bp/index.php:28)' in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors('HTTP/1.1 404 No...')
+#1 /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php(1150): header()
+#2 /Users/nerdfiles/Sites/slim_bp/index.php(30): Slim->run()
+#3 {main}
+  thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
+[04-Jan-2012 04:05:39] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/nerdfiles/Sites/slim_bp/index.php:28)' in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors('HTTP/1.1 404 No...')
+#1 /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php(1150): header()
+#2 /Users/nerdfiles/Sites/slim_bp/index.php(30): Slim->run()
+#3 {main}
+  thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
+[04-Jan-2012 04:22:11] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/nerdfiles/Sites/slim_bp/index.php:28)' in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors('HTTP/1.1 404 No...')
+#1 /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php(1150): header()
+#2 /Users/nerdfiles/Sites/slim_bp/index.php(30): Slim->run()
+#3 {main}
+  thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
