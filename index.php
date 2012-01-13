@@ -14,7 +14,8 @@ require 'Slim/Slim.php';
 $app = new Slim();
 
 $app->config(array(
-  'mode' => 'dev'
+  'mode' => 'dev',
+  'templates.path' => 'templates'
 ));
 
 $app->configureMode('prod', function () use ($app) {
@@ -26,11 +27,13 @@ $app->configureMode('prod', function () use ($app) {
 });
 
 $app->configureMode('dev', function () use ($app) {
-    $app->config(array(
-        'log.enable' => false,
-        'debug' => true
-    ));
+  $app->config(array(
+    'log.enable' => false,
+    'debug' => true,
+  ));
 });
+
+
 
 /*
 function recall_template() {
@@ -38,7 +41,6 @@ function recall_template() {
   return $template_path;
 }
 */
-
 //GET route
 $app->get('/', function () use ($app) {
   $app->render('base.php');
