@@ -8,7 +8,7 @@ $templates = $this->getTemplatesDirectory();
 
   <head>
 
-    <link rel="stylesheet" href="<?=$templates;?>" />
+    <link rel="stylesheet" href="<?=$templates;?>/_assets/css/compass/stylesheets/screen.css" />
 
   </head>
 
