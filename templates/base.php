@@ -13,7 +13,9 @@ $templates = $this->getTemplatesDirectory();
   </head>
 
   <body class="">
+
     <p>hello</p>
+
   </body>
 
 </html>
