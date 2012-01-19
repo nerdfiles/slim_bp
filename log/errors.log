@@ -44,3 +44,81 @@ Stack trace:
 #2 /Users/nerdfiles/Sites/slim_bp/index.php(30): Slim->run()
 #3 {main}
   thrown in /Users/nerdfiles/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 16:28:46] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/pbdigital/Sites/slim_bp/settings.php:7)' in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors(2, 'Cannot modify h...', '/Users/pbdigita...', 1150, Array)
+#1 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(1150): header('HTTP/1.1 200 OK')
+#2 /Users/pbdigital/Sites/slim_bp/index.php(48): Slim->run()
+#3 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 16:29:04] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/pbdigital/Sites/slim_bp/views/test.php:38)' in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors(2, 'Cannot modify h...', '/Users/pbdigita...', 1150, Array)
+#1 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(1150): header('HTTP/1.1 200 OK')
+#2 /Users/pbdigital/Sites/slim_bp/index.php(49): Slim->run()
+#3 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 16:29:24] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/pbdigital/Sites/slim_bp/views/test.php:38)' in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors(2, 'Cannot modify h...', '/Users/pbdigita...', 1150, Array)
+#1 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(1150): header('HTTP/1.1 200 OK')
+#2 /Users/pbdigital/Sites/slim_bp/index.php(49): Slim->run()
+#3 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 16:29:25] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/pbdigital/Sites/slim_bp/views/test.php:38)' in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors(2, 'Cannot modify h...', '/Users/pbdigita...', 1150, Array)
+#1 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(1150): header('HTTP/1.1 200 OK')
+#2 /Users/pbdigital/Sites/slim_bp/index.php(49): Slim->run()
+#3 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 17:01:40] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Undefined variable: testview' in /Users/pbdigital/Sites/slim_bp/index.php:34
+Stack trace:
+#0 /Users/pbdigital/Sites/slim_bp/index.php(34): Slim::handleErrors(8, 'Undefined varia...', '/Users/pbdigita...', 34, Array)
+#1 [internal function]: {closure}()
+#2 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(329): call_user_func(Object(Closure))
+#3 /Users/pbdigital/Sites/slim_bp/index.php(35): Slim->configureMode('dev', Object(Closure))
+#4 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/index.php on line 34
+[19-Jan-2012 17:02:30] PHP Fatal error:  Class 'TestView' not found in /Users/pbdigital/Sites/slim_bp/index.php on line 11
+[19-Jan-2012 17:02:38] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Undefined variable: testview' in /Users/pbdigital/Sites/slim_bp/index.php:34
+Stack trace:
+#0 /Users/pbdigital/Sites/slim_bp/index.php(34): Slim::handleErrors(8, 'Undefined varia...', '/Users/pbdigita...', 34, Array)
+#1 [internal function]: {closure}()
+#2 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(329): call_user_func(Object(Closure))
+#3 /Users/pbdigital/Sites/slim_bp/index.php(35): Slim->configureMode('dev', Object(Closure))
+#4 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/index.php on line 34
+[19-Jan-2012 17:03:02] PHP Fatal error:  Class 'testview' not found in /Users/pbdigital/Sites/slim_bp/index.php on line 44
+[19-Jan-2012 17:03:04] PHP Fatal error:  Class 'testview' not found in /Users/pbdigital/Sites/slim_bp/index.php on line 44
+[19-Jan-2012 17:03:16] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/pbdigital/Sites/slim_bp/views/test.php:33)' in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors(2, 'Cannot modify h...', '/Users/pbdigita...', 1150, Array)
+#1 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(1150): header('HTTP/1.1 200 OK')
+#2 /Users/pbdigital/Sites/slim_bp/index.php(55): Slim->run()
+#3 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 17:03:39] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Undefined variable: testview' in /Users/pbdigital/Sites/slim_bp/index.php:33
+Stack trace:
+#0 /Users/pbdigital/Sites/slim_bp/index.php(33): Slim::handleErrors(8, 'Undefined varia...', '/Users/pbdigita...', 33, Array)
+#1 [internal function]: {closure}()
+#2 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(329): call_user_func(Object(Closure))
+#3 /Users/pbdigital/Sites/slim_bp/index.php(34): Slim->configureMode('dev', Object(Closure))
+#4 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/index.php on line 33
+[19-Jan-2012 17:03:40] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Undefined variable: testview' in /Users/pbdigital/Sites/slim_bp/index.php:33
+Stack trace:
+#0 /Users/pbdigital/Sites/slim_bp/index.php(33): Slim::handleErrors(8, 'Undefined varia...', '/Users/pbdigita...', 33, Array)
+#1 [internal function]: {closure}()
+#2 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(329): call_user_func(Object(Closure))
+#3 /Users/pbdigital/Sites/slim_bp/index.php(34): Slim->configureMode('dev', Object(Closure))
+#4 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/index.php on line 33
+[19-Jan-2012 17:03:53] PHP Fatal error:  Uncaught exception 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at /Users/pbdigital/Sites/slim_bp/views/test.php:33)' in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php:1150
+Stack trace:
+#0 [internal function]: Slim->handleErrors(2, 'Cannot modify h...', '/Users/pbdigita...', 1150, Array)
+#1 /Users/pbdigital/Sites/slim_bp/Slim/Slim.php(1150): header('HTTP/1.1 200 OK')
+#2 /Users/pbdigital/Sites/slim_bp/index.php(55): Slim->run()
+#3 {main}
+  thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
+[19-Jan-2012 17:13:25] PHP Fatal error:  Class name must be a valid object or a string in /Users/pbdigital/Sites/slim_bp/index.php on line 49

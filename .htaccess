@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /slim_bp/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
+
