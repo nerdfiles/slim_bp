@@ -1,6 +1,6 @@
 <?php
 
-$php_debug = false;
+$php_debug = true;
 
 if ($php_debug) {
   @ini_set('log_errors','On'); // enable or disable php error logging (use 'On' or 'Off')
@@ -38,17 +38,16 @@ $app->configureMode('dev', function () use ($app) {
   ));
 });
 
-/*
-  function recall_template() {
-    $template_path = $app->config('templates.path'); //returns "../templates"
-    return $template_path;
-  }
-*/
+// recall template
+function recall_template() {
+  $template_path = $app->config('templates.path'); //returns "../templates"
+  return $template_path;
+}
 
 // set base layout
 $index_view::set_layout('base.html');
 
-//GET route
+// routes
 $app->get('/', function () use ($app) {
   $app->render('index.html');
 });
@@ -56,6 +55,35 @@ $app->get('/', function () use ($app) {
 $app->get('/test/', function() use ($app) {
 	$app->render('test.html');
 });
+
+/*
+$authenticateForRole = function($role="member") {
+   return function () use ($role) {
+     //Match cookie to existing user with role, else redirect to login page
+     $app->render('test.html');
+
+  }
+}
+*/
+
+/*
+$app->map('/login/', function () use ($app) {
+  if ( $app->request()->isPost() ) {
+    //If valid login, set auth cookie and redirect
+  }
+
+  $app->render('login.html');
+})->via('GET', 'POST');
+
+$app->get('/logout', function () use ($app) {
+  //Remove auth cookie and redirect to login page
+});
+ */
+/*
+$app->get('/protected-page', $authenticateForRole("admin"), function () use ($app) {
+  //Show protected information
+});
+ */
 
 $app->run();
 

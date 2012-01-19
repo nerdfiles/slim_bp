@@ -122,3 +122,6 @@ Stack trace:
 #3 {main}
   thrown in /Users/pbdigital/Sites/slim_bp/Slim/Slim.php on line 1150
 [19-Jan-2012 17:13:25] PHP Fatal error:  Class name must be a valid object or a string in /Users/pbdigital/Sites/slim_bp/index.php on line 49
+[19-Jan-2012 17:47:54] PHP Fatal error:  Function name must be a string in /Users/pbdigital/Sites/slim_bp/index.php on line 61
+[19-Jan-2012 17:49:59] PHP Fatal error:  Function name must be a string in /Users/pbdigital/Sites/slim_bp/index.php on line 74
+[19-Jan-2012 17:51:54] PHP Fatal error:  Function name must be a string in /Users/pbdigital/Sites/slim_bp/index.php on line 83

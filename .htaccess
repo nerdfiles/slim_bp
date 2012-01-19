@@ -4,3 +4,9 @@ RewriteBase /slim_bp/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php [QSA,L]
 
+AuthUserFile .htpasswd
+AuthGroupFile /dev/null
+AuthName EnterPassword
+AuthType Basic
+
+require user bppennebaker
