@@ -1,12 +1,20 @@
-<!DOCTYPE HTML>
-
 <?php
 $templates = $this->getTemplatesDirectory();
 ?>
 
+<!DOCTYPE HTML>
+
 <html lang="en">
 
-<p>hello</p>
+  <head>
+
+    <link rel="stylesheet" href="<?=$templates;?>" />
+
+  </head>
+
+  <body class="">
+    <p>hello</p>
+  </body>
 
 </html>
 
