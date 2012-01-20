@@ -51,13 +51,15 @@ $app->get('/', function() use ($app) {
   $app->render('index.html');
 });
 
-$app->get('/detail/:itemname/', function() use ($app) {
+$app->get('/detail/:itemname', function() use ($app) {
   $app->render('detail.html');
 });
 
+/*
 $app->get('/test/', function() use ($app) {
 	$app->render('test.html');
 });
+*/
 
 /*
 $authenticateForRole = function($role="member") {
@@ -67,9 +69,7 @@ $authenticateForRole = function($role="member") {
 
   }
 }
-*/
 
-/*
 $app->map('/login/', function () use ($app) {
   if ( $app->request()->isPost() ) {
     //If valid login, set auth cookie and redirect
@@ -81,12 +81,11 @@ $app->map('/login/', function () use ($app) {
 $app->get('/logout', function () use ($app) {
   //Remove auth cookie and redirect to login page
 });
- */
-/*
+
 $app->get('/protected-page', $authenticateForRole("admin"), function () use ($app) {
   //Show protected information
 });
- */
+*/
 
 $app->run();
 
