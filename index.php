@@ -105,21 +105,45 @@ function recall_template() {
  *
  * ==============================================*/
 
-  $app->hook('before_body', function() use ($app) {
+  $app->hook('before.body', function() use ( $app ) {
 
   });
 
-  $app->hook('after_body', function() use ($app) {
+  $app->hook('after.body', function() use ( $app ) {
 
   });
 
 // End HOOKS
+
+
+/* == *
+ *
+ * FILTERS
+ *
+ * ==============================================*/
+
+  $app->hook('test.filer', function( $argument ) {
+    return $argument;
+  });
+
+// End FILTERS
+
 
 /* == *
  *
  * ROUTES
  *
  * ==============================================*/
+
+  $app->map('/', function () use ($app) {
+    if ( $app->request()->isPost() ) {
+      // if valid login, set auth cookie and redirect
+
+      $app->redirect('/list');
+    }
+
+    $app->render('login.html');
+  })->via('GET', 'POST');
 
   $app->get('/list/', function() use ($app) {
     $app->render('index.html');
@@ -143,17 +167,7 @@ function recall_template() {
 
     }
   }
-  */
 
-  $app->map('/', function () use ($app) {
-    if ( $app->request()->isPost() ) {
-      //If valid login, set auth cookie and redirect
-    }
-
-    $app->render('login.html');
-  })->via('GET', 'POST');
-
-  /*
   $app->get('/logout', function () use ($app) {
     //Remove auth cookie and redirect to login page
   });

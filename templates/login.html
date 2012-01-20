@@ -1,13 +1,19 @@
 <div class="login">
 
-	<h1>Log In</h1>
+	<h1>Log in</h1>
 
-	<form>
-		<label for="username">User Name</label>	
-		<input name="username" type="text">
-		<label for="password">Password</label>
-		<input name="password" type="password">
-		<input type="submit" value="Log In">
+  <form
+    action="."
+    method="post"
+    tabindex="1"
+    class="accessiblyHideLabels">
+
+		<label for="username" title="Please provide your given username">Username</label>	
+		<input id="username" name="username" type="text" placeholder="Username" />
+		<label for="password" title="Please provide a password">Password</label>
+		<input id="password" name="password" type="password" placeholder="Password" />
+		<input type="submit" value="Log In" />
+
 	</form>
 	
 </div>
