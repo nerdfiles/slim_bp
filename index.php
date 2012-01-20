@@ -56,10 +56,14 @@ $app = new Slim(array(
   'templates.path' => 'templates',
   'view' => $index_view,
   'cookies.secret_key'  => 'r+hhiXlmC4NvsQpq/jaZPK6h+sornz0LC3cbdJNj',
-  'cookies.lifetime' => time() + (1 * 24 * 60 * 60), // = 1 day
+  #'cookies.lifetime' => time() + (1 * 24 * 60 * 60), // = 1 day
   'cookies.cipher' => MCRYPT_RIJNDAEL_256,
-  'cookies.cipher_mode' => MCRYPT_MODE_CBC
+  'cookies.cipher_mode' => MCRYPT_MODE_CBC,
+  'cookies.secure' => false
 ));
+
+// set name
+$app->setName('reviewApp');
 
 // End SLIM INIT
 
@@ -163,18 +167,19 @@ function recall_template() {
 
   $authUser = function( $role = 'member') {
     return function () use ( $role ) {
-      $app = Slim::getInstance('bppasscook');
-
+      $app = Slim::getInstance('reviewApp');
+      
+      echo $app->getEncryptedCookie('bppasscook', false);
       // Check for password in the cookie
       if ( $app->getEncryptedCookie('bppasscook', false) != 'uAX8+Tdv23/3YQ==' ) {
-        $app->redirect('..');
+        //$app->redirect('..');
       }
     };
   };
 
-  $app->get('/review/', $authUser('review'), function() use ($app) {
+  $app->get('/review/', $authUser('admin'), function() use ($app) {
     $app->render('index.html');
-  })->name('review');
+  })->name('admin');
 
   $app->get('/detail/:itemname', function() use ($app) {
     $app->render('detail.html');

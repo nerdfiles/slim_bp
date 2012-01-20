@@ -144,3 +144,16 @@ Stack trace:
 [20-Jan-2012 16:41:42] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
 [20-Jan-2012 16:43:23] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
 [20-Jan-2012 17:03:19] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:05:21] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:05:48] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:06:40] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:06:41] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:12:44] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:12:45] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:12:49] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:12:59] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:13:08] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:13:08] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:13:14] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:13:29] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:18:57] PHP Fatal error:  Call to a member function setName() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 65
