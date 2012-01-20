@@ -1,0 +1,124 @@
+/*------------------------------------------------------------
+STYLE (MAIN)
+max width: ∞
+min width: ∞
+------------------------------------------------------------*/
+
+
+
+@import "vars";
+
+
+
+/* CONSTANTS
+------------------------------------------------------------*/
+html,
+body{ }
+
+html{ }
+
+body{
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	color: $black;
+	font-size: 13px; }
+	
+strong{
+	font-weight: bold; }
+/*----------------------------------------------------------*/
+
+
+
+/* SECTION
+------------------------------------------------------------*/
+.wrapper{
+	width: 1002px;
+	margin: 0 auto; }
+	
+header{
+	margin: 42px 21px;
+	h1.logo{
+		margin-bottom: 28px; }
+	div.meta{
+		padding: 12px 0; 
+		border-bottom: 1px solid $grey;
+		border-top: 1px solid $grey;
+		overflow: auto;
+		p{
+			float: left;
+			margin-right: 32px; } } }
+			
+.login{
+	margin: 0 21px 42px;
+	h1{
+		margin-bottom: 21px;
+		font-size: 32px;
+		font-weight: bold; }
+	form{
+		font-family: 'Helvetica Neue', Arial, sans-serif;
+		label{
+			font-size: 12px;
+			display: block;
+			margin-bottom: 3px; }
+		input[type="text"], input[type="password"]{
+			width: 252px;
+			display: block;
+			margin-bottom: 21px;
+			font-size: 16px;
+			padding: 8px;
+			outline: none;
+			border: 1px solid $grey;
+			&:focus{
+				border: 1px solid $red; } }
+		input[type="submit"]{
+			font-size: 16px;
+			padding: 8px;
+			background: $grey;
+			color: $white;
+			border: 1px solid darken($grey, 10%);
+			border-radius: 2px;
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			-o-border-radious: 2px;
+			cursor: pointer;
+			&:hover{
+				background: lighten($grey, 3%); } } } }
+	
+.showcase{
+	.item{
+		width: 292px;
+		margin: 0 21px 42px;
+		float: left;
+		display: block;
+		color: $black;
+		text-decoration: none;
+		border-radius: 2px;
+		-webkit-transition: ease-out .2s background;
+		&:hover > h1{
+			color: $red; }
+		img{
+			display: block; 
+			margin-bottom: 14px; }
+		h1{
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 8px;
+			-webkit-transition: ease-out .1s color; }
+		p{
+			margin: 0;
+			line-height: 1.3; } } }
+			
+.showcase-single{
+	margin: 0 21px;
+	h1{
+		margin-bottom: 21px;
+		font-size: 32px;
+		font-weight: bold; }
+	.video-js-box{
+		margin-bottom: 21px; }
+	p{
+		margin-bottom: 42px;
+		padding-right: 252px;
+		font-size: 16px;
+		line-height: 1.3; } }
+
+/*----------------------------------------------------------*/

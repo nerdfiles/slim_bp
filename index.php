@@ -1,5 +1,4 @@
 <?php
-
 $php_debug = true;
 
 if ($php_debug) {
