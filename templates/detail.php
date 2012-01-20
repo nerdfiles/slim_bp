@@ -1,7 +1,3 @@
-<?php include_once('header.php'); ?>
-
-
-
 <!-- VIDEO VARS -->
 <?php
 	
@@ -36,10 +32,6 @@
   <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 
 </div>
-
-
-
-<?php include_once('footer.php'); ?>
 
 
 
