@@ -1,4 +1,11 @@
 <?php
+
+/* == *
+ *
+ * SETTINGS
+ *
+ * ==============================================*/
+
 $php_debug = true;
 
 if ($php_debug) {
@@ -7,35 +14,81 @@ if ($php_debug) {
   @ini_set('error_log','log/errors.log'); // path to server-writable log file
 }
 
-// deps
+// End SETTINGS
+
+
+/* == *
+ *
+ * INCLUDES
+ *
+ * ==============================================*/
+
 require 'Slim/Slim.php';
 require 'views/index.php';
 
+// End INCLUDES
+
+
+/* == *
+ *
+ * BASE VIEW
+ *
+ * Call it a design pattern for simple apps.
+ *
+ * ==============================================*/
+
 // view init
 $index_view = new Index_View();
+// set base layout
+$index_view::set_layout('base.html');
 
-// slim init
+// End BASE VIEW
+
+
+/* == *
+ *
+ * SLIM INIT
+ *
+ * ==============================================*/
+
 $app = new Slim(array(
   'mode' => 'dev',
   'templates.path' => 'templates',
   'view' => $index_view
 ));
 
-// configs
-$app->configureMode('prod', function () use ($app) {
-  $app->config(array(
-    'log.enable' => true,
-    'log.path' => '../logs',
-    'debug' => false
-  ));
-});
+// End SLIM INIT
 
-$app->configureMode('dev', function () use ($app) {
-  $app->config(array(
-    'log.enable' => false,
-    'debug' => true
-  ));
-});
+
+/* == *
+ *
+ * CONFIGS
+ *
+ * ==============================================*/
+
+  $app->configureMode('prod', function () use ($app) {
+    $app->config(array(
+      'log.enable' => true,
+      'log.path' => '../logs',
+      'debug' => false
+    ));
+  });
+
+  $app->configureMode('dev', function () use ($app) {
+    $app->config(array(
+      'log.enable' => false,
+      'debug' => true
+    ));
+  });
+
+// End CONFIGS
+
+
+/* == *
+ *
+ * UTILS
+ *
+ * ==============================================*/
 
 // recall template
 function recall_template() {
@@ -43,52 +96,85 @@ function recall_template() {
   return $template_path;
 }
 
-// set base layout
-$index_view::set_layout('base.html');
+// End UTILS
 
-// routes
-$app->get('/list/', function() use ($app) {
-  $app->render('index.html');
-});
 
-$app->get('/detail/:itemname', function() use ($app) {
-  $app->render('detail.html');
-});
+/* == *
+ *
+ * HOOKS
+ *
+ * ==============================================*/
 
-/*
-$app->get('/test/', function() use ($app) {
-	$app->render('test.html');
-});
-*/
+  $app->hook('before_body', function() use ($app) {
 
-/*
-$authenticateForRole = function($role="member") {
-   return function () use ($role) {
-     //Match cookie to existing user with role, else redirect to login page
-     $app->render('test.html');
+  });
 
+  $app->hook('after_body', function() use ($app) {
+
+  });
+
+// End HOOKS
+
+/* == *
+ *
+ * ROUTES
+ *
+ * ==============================================*/
+
+  $app->get('/list/', function() use ($app) {
+    $app->render('index.html');
+  });
+
+  $app->get('/detail/:itemname', function() use ($app) {
+    $app->render('detail.html');
+  });
+
+  /*
+  $app->get('/test/', function() use ($app) {
+    $app->render('test.html');
+  });
+  */
+
+  /*
+  $authenticateForRole = function($role="member") {
+     return function () use ($role) {
+       //Match cookie to existing user with role, else redirect to login page
+       $app->render('test.html');
+
+    }
   }
-}
-*/
+  */
 
-$app->map('/', function () use ($app) {
-  if ( $app->request()->isPost() ) {
-    //If valid login, set auth cookie and redirect
-  }
+  $app->map('/', function () use ($app) {
+    if ( $app->request()->isPost() ) {
+      //If valid login, set auth cookie and redirect
+    }
 
-  $app->render('login.html');
-})->via('GET', 'POST');
+    $app->render('login.html');
+  })->via('GET', 'POST');
 
-/*
-$app->get('/logout', function () use ($app) {
-  //Remove auth cookie and redirect to login page
-});
+  /*
+  $app->get('/logout', function () use ($app) {
+    //Remove auth cookie and redirect to login page
+  });
 
-$app->get('/protected-page', $authenticateForRole("admin"), function () use ($app) {
-  //Show protected information
-});
-*/
+  $app->get('/protected-page', $authenticateForRole("admin"), function () use ($app) {
+    //Show protected information
+  });
+  */
 
-$app->run();
+// End ROUTES
+
+
+/* == *
+ *
+ * INIT APP
+ *
+ * ==============================================*/
+
+  $app->run();
+
+// End INIT APP
+
 
 ?>
