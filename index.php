@@ -1,4 +1,5 @@
 <?php
+
 /*
   require 'settings.php';
 
@@ -9,6 +10,7 @@
     @ini_set('error_log','log/errors.log'); // path to server-writable log file
   }
 */
+
 require 'Slim/Slim.php';
 
 $app = new Slim();

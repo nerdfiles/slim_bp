@@ -1,0 +1,46 @@
+<?php include_once('header.php'); ?>
+
+
+
+<!-- VIDEO VARS -->
+<?php
+	
+	$vid_url = "http://video-js.zencoder.com/oceans-clip.mp4";
+	$poster_url = "http://video-js.zencoder.com/oceans-clip.png";
+	
+	$vid_width = "960";
+	$vid_height = "396";
+	
+?>
+
+
+
+<div class="showcase-single">
+
+	<h1>Dapibus Ullamcorper</h1>
+
+  <div class="video-js-box"><!-- Begin VideoJS -->
+		<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="<?php echo $vid_width; ?>" height="<?php echo $vid_height; ?>" poster="<?php echo $poster_url; ?>" data-setup="{}">
+			<source src="<?php echo $vid_url; ?>" type='video/mp4' />
+			<object id="flash_fallback_1" class="vjs-flash-fallback" width="<?php echo $vid_width; ?>" height="<?php echo $vid_height; ?>" type="application/x-shockwave-flash" 
+			data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+				<param name="movie" value="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" />
+				<param name="allowfullscreen" value="true" />
+				<param name="flashvars" 
+				value='config={"playlist":["<?php echo $poster_url; ?>", {"url": "<?php echo $vid_url; ?>","autoPlay":false,"autoBuffering":true}]}' />
+				<img src="<?php echo $poster_url; ?>" width="<?php echo $vid_width; ?>" height="<?php echo $vid_height; ?>" alt="Poster Image" title="No video playback capabilities." />
+			</object>
+		</video>
+  </div><!-- End VideoJS -->
+  
+  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+
+</div>
+
+
+
+<?php include_once('footer.php'); ?>
+
+
+
+
