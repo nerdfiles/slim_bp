@@ -47,8 +47,12 @@ function recall_template() {
 $index_view::set_layout('base.html');
 
 // routes
-$app->get('/', function () use ($app) {
+$app->get('/', function() use ($app) {
   $app->render('index.html');
+});
+
+$app->get('/detail/:itemname/', function() use ($app) {
+  $app->render('detail.html');
 });
 
 $app->get('/test/', function() use ($app) {
