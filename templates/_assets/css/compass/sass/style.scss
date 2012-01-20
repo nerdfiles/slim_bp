@@ -27,6 +27,11 @@ strong{
 /*----------------------------------------------------------*/
 
 
+.accessiblyHideLabels label { position: absolute; left: -9999px; }
+*:focus,
+*:target { outline: none; }
+
+
 
 /* SECTION
 ------------------------------------------------------------*/

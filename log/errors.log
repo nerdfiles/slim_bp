@@ -128,3 +128,19 @@ Stack trace:
 [20-Jan-2012 11:57:01] PHP Fatal error:  Call to a member function render() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 51
 [20-Jan-2012 12:29:00] PHP Parse error:  syntax error, unexpected '<' in /Users/pbdigital/Sites/slim_bp/templates/base.html on line 5
 [20-Jan-2012 12:31:07] PHP Parse error:  syntax error, unexpected T_STRING, expecting ']' in /Users/pbdigital/Sites/slim_bp/templates/base.html on line 8
+[20-Jan-2012 16:22:32] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 168
+[20-Jan-2012 16:25:59] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 16:26:17] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 16:29:40] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:30:49] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:30:55] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:31:01] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:31:18] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:31:23] PHP Fatal error:  Call to undefined method stdClass::getEncryptedCookie() in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:31:29] PHP Fatal error:  Call to undefined method stdClass::getEncryptedCookie() in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:31:34] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:41:00] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:41:31] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:41:42] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 167
+[20-Jan-2012 16:43:23] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169
+[20-Jan-2012 17:03:19] PHP Fatal error:  Call to a member function getEncryptedCookie() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 169

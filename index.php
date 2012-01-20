@@ -54,7 +54,11 @@ $index_view::set_layout('base.html');
 $app = new Slim(array(
   'mode' => 'dev',
   'templates.path' => 'templates',
-  'view' => $index_view
+  'view' => $index_view,
+  'cookies.secret_key'  => 'r+hhiXlmC4NvsQpq/jaZPK6h+sornz0LC3cbdJNj',
+  'cookies.lifetime' => time() + (1 * 24 * 60 * 60), // = 1 day
+  'cookies.cipher' => MCRYPT_RIJNDAEL_256,
+  'cookies.cipher_mode' => MCRYPT_MODE_CBC
 ));
 
 // End SLIM INIT
@@ -136,18 +140,41 @@ function recall_template() {
  * ==============================================*/
 
   $app->map('/', function () use ($app) {
-    if ( $app->request()->isPost() ) {
-      // if valid login, set auth cookie and redirect
 
-      $app->redirect('/list');
+    if ( $app->request()->isPost() && sizeof($app->request()->post()) == 2 ) {
+      
+      // if valid login, set auth cookie and redirect
+      $testp = sha1('uAX8+Tdv23/3YQ==');
+
+      $post = (object)$app->request()->post();
+
+      if ( isset($post->username) && isset($post->password) && sha1($post->password) == $testp ) {
+        $app->setEncryptedCookie('bppasscook', $post->password, 0);
+        $app->redirect('./review');
+      } else {
+        $app->redirect('.');
+      }
+
     }
 
     $app->render('login.html');
-  })->via('GET', 'POST');
 
-  $app->get('/list/', function() use ($app) {
+  })->via('GET', 'POST')->name('login');
+
+  $authUser = function( $role = 'member') {
+    return function () use ( $role ) {
+      $app = Slim::getInstance('bppasscook');
+
+      // Check for password in the cookie
+      if ( $app->getEncryptedCookie('bppasscook', false) != 'uAX8+Tdv23/3YQ==' ) {
+        $app->redirect('..');
+      }
+    };
+  };
+
+  $app->get('/review/', $authUser('review'), function() use ($app) {
     $app->render('index.html');
-  });
+  })->name('review');
 
   $app->get('/detail/:itemname', function() use ($app) {
     $app->render('detail.html');
