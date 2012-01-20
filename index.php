@@ -47,7 +47,7 @@ function recall_template() {
 $index_view::set_layout('base.html');
 
 // routes
-$app->get('/', function() use ($app) {
+$app->get('/list/', function() use ($app) {
   $app->render('index.html');
 });
 
@@ -69,8 +69,9 @@ $authenticateForRole = function($role="member") {
 
   }
 }
+*/
 
-$app->map('/login/', function () use ($app) {
+$app->map('/', function () use ($app) {
   if ( $app->request()->isPost() ) {
     //If valid login, set auth cookie and redirect
   }
@@ -78,6 +79,7 @@ $app->map('/login/', function () use ($app) {
   $app->render('login.html');
 })->via('GET', 'POST');
 
+/*
 $app->get('/logout', function () use ($app) {
   //Remove auth cookie and redirect to login page
 });

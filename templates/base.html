@@ -1,6 +1,18 @@
 <!doctype html>
 
-<?php $templates = $this->getTemplatesDirectory(); ?>
+<?php 
+
+// url construction
+$protocol = 'http';
+$addr = $_SERVER['SERVER_ADDR'];
+$port = ($_SERVER['SERVER_PORT'] != '80') ? (':' . $_SERVER['SERVER_PORT']) : '';
+$sep = '/';
+
+// project vars
+$project = 'slim_bp';
+$templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this->getTemplatesDirectory(); 
+
+?>
 
 <!--[if lt IE 7]><html class="ie6" lang="en"><![endif]-->
 <!--[if IE 7]><html class="ie7" lang="en"><![endif]-->
@@ -17,27 +29,27 @@
 	<!-- =================================================================== -->
 	
 	<!-- METADATA + VIEWPORT =============================================== -->
-	<title>TITLE HERE</title>
+  <title>TITLE HERE <?=$_SERVER['SERVER_PORT'];?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- =================================================================== -->
+	<!-- ================================================================= -->
 	
 	<!-- ICONS ============================================================ -->
-	<link rel="shortcut icon" href="./<?=$templates;?>/_assets/img/icons/favicon.ico"><!-- ☑ remove if in root -->
+	<link rel="shortcut icon" href="<?=$templates;?>/_assets/img/icons/favicon.ico"><!-- ☑ remove if in root -->
 	<!-- ================================================================== -->
 	
 	<!-- MODERNIZR ======================================================== -->
-	<script src="./<?=$templates;?>/_assets/js/libs/modernizr-2.0.6.js"></script><!-- ☑ switch this to dev version -->
+	<script src="<?=$templates;?>/_assets/js/libs/modernizr-2.0.6.js"></script><!-- ☑ switch this to dev version -->
 	<!-- ================================================================== -->
 	
 	<!-- STYLESHEETS ====================================================== -->
-	<link rel="stylesheet" href="./<?=$templates;?>/_assets/css/compass/stylesheets/reset.css">
-	<link rel="stylesheet" href="./<?=$templates;?>/_assets/css/compass/stylesheets/style.css">
-	<link rel="stylesheet" href="./<?=$templates;?>/_assets/css/compass/stylesheets/print.css">
+	<link rel="stylesheet" href="<?=$templates;?>/_assets/css/compass/stylesheets/reset.css">
+	<link rel="stylesheet" href="<?=$templates;?>/_assets/css/compass/stylesheets/style.css">
+	<link rel="stylesheet" href="<?=$templates;?>/_assets/css/compass/stylesheets/print.css">
 	<!-- ================================================================== -->
 	
 	<!-- VIDEO JS ========================================================= -->
-	<link href="./<?=$templates;?>/_assets/video-js/video-js.min.css" rel="stylesheet">
-	<script src="./<?=$templates;?>/_assets/video-js/video.min.js"></script>
+	<link href="<?=$templates;?>/_assets/video-js/video-js.min.css" rel="stylesheet">
+	<script src="<?=$templates;?>/_assets/video-js/video.min.js"></script>
 	<!-- ================================================================== -->
 
 </head>
@@ -47,7 +59,7 @@
 <div class="wrapper"> <!-- START WRAPPER -->
 
 	<header>
-		<h1 class="logo"><img src="./<?=$templates;?>/_assets/img/pennebaker.png" alt="Pennebaker"></h1>
+		<h1 class="logo"><img src="<?=$templates;?>/_assets/img/pennebaker.png" alt="Pennebaker"></h1>
 		<div class="meta">
 			<p>Client: <strong>BP</strong></p>
 			<p>Project: <strong>Lorem Ipsum</strong></p>
@@ -64,16 +76,16 @@
 
 <!-- JQUERY =========================================================== -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>window.jQuery || document.write('<script src="./<?=$templates;?>/_assets/js/libs/jquery-1.7-min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-1.7-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest -->
 
 <script src="http://code.jquery.com/ui/1.8.15/jquery-ui.js"></script>
-<script>window.jQuery || document.write('<script src="./<?=$templates;?>/_assets/js/libs/jquery-ui-1.8.16-min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-ui-1.8.16-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest, ☑ are we really using jQuery UI -->
 <!-- ================================================================== -->
 
 <!-- SELECTIVIZR ====================================================== -->
-<script src="./<?=$templates;?>/_assets/js/libs/selectivizr-min.js"></script>
+<script src="<?=$templates;?>/_assets/js/libs/selectivizr-min.js"></script>
 <!-- ================================================================== -->
 
 <!-- ================================================================== -->

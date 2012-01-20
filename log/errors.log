@@ -125,3 +125,6 @@ Stack trace:
 [19-Jan-2012 17:47:54] PHP Fatal error:  Function name must be a string in /Users/pbdigital/Sites/slim_bp/index.php on line 61
 [19-Jan-2012 17:49:59] PHP Fatal error:  Function name must be a string in /Users/pbdigital/Sites/slim_bp/index.php on line 74
 [19-Jan-2012 17:51:54] PHP Fatal error:  Function name must be a string in /Users/pbdigital/Sites/slim_bp/index.php on line 83
+[20-Jan-2012 11:57:01] PHP Fatal error:  Call to a member function render() on a non-object in /Users/pbdigital/Sites/slim_bp/index.php on line 51
+[20-Jan-2012 12:29:00] PHP Parse error:  syntax error, unexpected '<' in /Users/pbdigital/Sites/slim_bp/templates/base.html on line 5
+[20-Jan-2012 12:31:07] PHP Parse error:  syntax error, unexpected T_STRING, expecting ']' in /Users/pbdigital/Sites/slim_bp/templates/base.html on line 8
