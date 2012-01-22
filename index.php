@@ -181,7 +181,9 @@ function recall_template() {
   };
 
   $app->get('/review/', $authUser('review'), function() use ($app) {
-    $app->render('index.html');
+    $json_data = file_get_contents('./data/bp_review.json');
+    $data = json_decode($json_data, true);
+    $app->render('index.html', array( 'data' => $data ));
   })->name('review');
 
   $app->get('/detail/:itemname', function($itemname) use ($app) {

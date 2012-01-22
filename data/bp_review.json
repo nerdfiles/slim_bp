@@ -1,0 +1,28 @@
+{
+  "review": [
+    {
+      "title": "something special!",
+      "slug": "something-special-1",
+      "pubdate": "01-22-2012",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p>...</p>"
+    },
+    {
+      "title": "something special!",
+      "slug": "something-special-2",
+      "pubdate": "01-22-2012",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p>...</p>"
+    },
+    {
+      "title": "something special!",
+      "slug": "something-special-3",
+      "pubdate": "01-22-2012",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p>...</p>"
+    }
+  ]
+}
