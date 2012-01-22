@@ -8,7 +8,7 @@
       "vid_url": "",
       "vid_poster_url": "",
       "image": "",
-      "content": "<p>...</p>",
+      "content": "<p>... something special 1</p>",
       "thumbnail_caption": ""
     },
     {
@@ -19,7 +19,7 @@
       "vid_poster_url": "",
       "thumbnail": "",
       "image": "",
-      "content": "<p>...</p>",
+      "content": "<p>... something special 2</p>",
       "thumbnail_caption": ""
     },
     {
@@ -30,7 +30,7 @@
       "vid_poster_url": "",
       "thumbnail": "",
       "image": "",
-      "content": "<p>...</p>",
+      "content": "<p>... something special 3</p>",
       "thumbnail_caption": ""
     }
   ]
