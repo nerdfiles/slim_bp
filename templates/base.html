@@ -88,6 +88,52 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <script src="<?=$templates;?>/_assets/js/libs/selectivizr-min.js"></script>
 <!-- ================================================================== -->
 
+<script>
+  ;(function($) {
+    $(function() {
+      //console.log('showcase-single');
+      var Review = {};
+
+      Review.init = function() {
+        this.showcase_single();
+      };
+
+      Review.showcase_single = function() {
+        
+        var $elem = $('.showcase-single');
+        
+        if ( $elem.length ) {
+          
+          var p = window.location.pathname.split('/'); // array('slim_bp', 'review', 'something-special-3')
+          var l = (p.length-1); // get last element of array p
+
+          $.getJSON('../data/bp_review.json', function(data) {
+
+            var arr = data['review'];
+
+            var a = jQuery.grep(arr, function(n, i) {
+              return n.slug == p[l];
+            });
+
+            a[0]['content'];
+
+            // print, motherfuckers!
+            // console.log(a);
+
+          });
+
+          //$('.showcase-single').fadeOut().fadeIn();
+
+        } // End if
+
+      };
+
+      Review.init();
+    
+    });
+  })(jQuery);
+</script>
+
 <!-- ================================================================== -->
 
 

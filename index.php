@@ -186,7 +186,7 @@ function recall_template() {
     $app->render('index.html', array( 'data' => $data ));
   })->name('review');
 
-  $app->get('/detail/:itemname', function($itemname) use ($app) {
+  $app->get('/review/:itemname', $authUser('review'), function($itemname) use ($app) {
     $app->render('detail.html');
   });
 
