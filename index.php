@@ -152,8 +152,9 @@ function recall_template() {
 
       $post = (object)$app->request()->post();
 
-      if ( isset($post->username) && isset($post->password) && sha1($post->password) == $testp ) {
+      if ( isset($post->username) && isset($post->password) && sha1($post->password) == $testp && $post->username == 'bppenne' ) {
         //$app->setEncryptedCookie('bppasscook', $post->password, 0);
+        $app->setCookie('user_cook', $post->username, 0);
         $app->setCookie('pass_cook', $post->password, 0);
         $app->redirect('./review');
       } else {
@@ -171,7 +172,7 @@ function recall_template() {
       $app = Slim::getInstance();
       
       // Check for password in the cookie
-      if ( $app->getCookie('pass_cook') != 'uAX8+Tdv23/3YQ==') {
+      if ( $app->getCookie('pass_cook') != 'uAX8+Tdv23/3YQ==' || $app->getCookie('user_cook') != 'bppenne' ) {
       //if ( $app->getEncryptedCookie('bppasscook', false) != 'uAX8+Tdv23/3YQ==') {
         $app->redirect('..');
         //$app->redirect('review');
