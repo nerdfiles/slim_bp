@@ -4,7 +4,7 @@ max width: ∞
 min width: ∞
 ------------------------------------------------------------*/
 
-
+@import "compass/css3";
 
 @import "vars";
 
@@ -69,16 +69,22 @@ strong{
 	
 header{
 	margin: 42px 21px;
-	h1.logo{
+	.logo{
 		margin-bottom: 28px; }
-	div.meta{
+	.meta{
 		padding: 12px 0; 
 		border-bottom: 1px solid $grey;
 		border-top: 1px solid $grey;
 		overflow: auto;
-		p{
+    dt { 
+      @include inline-block; }
+    dd { 
+      @include inline-block;
+      margin: 0 32px 0 0;
+      font-weight: 600; }
+		/* p {
 			float: left;
-			margin-right: 32px; } } }
+			margin-right: 32px; }*/ } }
 			
 .login{
 	margin: 0 21px 42px;
