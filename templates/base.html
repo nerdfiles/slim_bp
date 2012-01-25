@@ -119,9 +119,22 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 
             $('.content').html(a[0]['content']);
             $('video')
+              .attr('width', '960')
+              .attr('height', '540')
               .attr('src', a[0]['vid_url'])
               .attr('poster', a[0]['vid_poster_url']);
 
+            $('video object')
+              .attr('width', '960')
+              .attr('height', '540');
+
+            $('video source')
+              .attr('src', a[0]['vid_url']);
+
+            $('video img')
+              .attr('width', '960')
+              .attr('height', '540')
+              .attr('src', a[0]['vid_poster_url']);
           });
 
         } // End if
