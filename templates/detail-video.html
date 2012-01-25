@@ -21,18 +21,18 @@
       class="video-js vjs-default-skin" 
       controls 
       preload="none" 
-      width="<?php echo $width; ?>" 
-      height="<?php echo $height; ?>" 
-      poster="<?php echo $poster_src; ?>" 
+      width="<?=$width;?>" 
+      height="<?=$height;?>" 
+      poster="<?=$poster_src;?>" 
       data-setup="{}">
       
-        <source src="<?php echo $vid_src; ?>" type='video/mp4' />
+        <source src="<?=$vid_src;?>" type='video/mp4' />
 
         <object 
           id="flash_fallback_1" 
           class="vjs-flash-fallback" 
-          width="<?php echo $width; ?>" 
-          height="<?php echo $height; ?>" 
+          width="<?=$width;?>" 
+          height="<?=$height;?>" 
           type="application/x-shockwave-flash" 
           data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
 
@@ -44,11 +44,11 @@
               value="true" />
             <param 
               name="flashvars" 
-              value='config={"playlist":["<?php echo $vid_src; ?>", {"url": "<?php echo $vid_src; ?>","autoPlay":false,"autoBuffering":true}]}' />
+              value='config={"playlist":["<?=$vid_src;?>", {"url": "<?=$vid_src;?>","autoPlay":false,"autoBuffering":true}]}' />
             <img 
-              src="<?php echo $poster_src; ?>" 
-              width="<?php echo $width; ?>" 
-              height="<?php echo $height; ?>" 
+              src="<?=$poster_src;?>" 
+              width="<?=$width;?>" 
+              height="<?=$height;?>" 
               alt="Poster Image" 
               title="No video playback capabilities." />
 
@@ -59,7 +59,7 @@
   </div><!-- End VideoJS -->
 
   <div class="content">
-    <?php echo $content; ?>
+    <?=$content;?>
   </div>
 
 </div>
