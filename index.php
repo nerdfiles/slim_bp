@@ -6,7 +6,7 @@
  *
  * ==============================================*/
 
-$php_debug = false;
+$php_debug = true;
 
 if ($php_debug) {
   @ini_set('log_errors','On'); // enable or disable php error logging (use 'On' or 'Off')
