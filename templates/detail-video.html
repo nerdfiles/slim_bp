@@ -19,6 +19,7 @@
   <div class="video-js-box"><!-- Begin VideoJS -->
 
     <video 
+      id="video_sample" 
       class="video-js vjs-default-skin" 
       controls 
       preload="none" 
@@ -31,7 +32,7 @@
         <source src="<?=$vid_src;?>" type='video/mp4' />
 
         <object 
-          id="flash_fallback_1" 
+          id="flash_fallback" 
           class="vjs-flash-fallback" 
           width="<?=$width;?>" 
           height="<?=$height;?>" 
@@ -46,7 +47,7 @@
               value="true" />
             <param 
               name="flashvars" 
-              value='config={"playlist":["<?=$vid_src;?>", {"url": "<?=$vid_src;?>","autoPlay":false,"autoBuffering":true}]}' />
+              value='config={"playlist":["<?=$poster_src;?>", {"url": "<?=$vid_src;?>","autoPlay":false,"autoBuffering":true}]}' />
             <img 
               src="<?=$poster_src;?>" 
               width="<?=$width;?>" 
