@@ -14,6 +14,11 @@ if ( $addr == '127.0.0.1') {
   $project = 'slim_bp';
 }
 
+if ( $addr != '127.0.0.1') {
+  $addr = 'mt.pennebaker.com';
+}
+
+
 $site_url = $protocol . '://' . $addr . $port . $sep . $project . $sep;
 $templates = $site_url . $this->getTemplatesDirectory(); 
 
@@ -78,7 +83,7 @@ $templates = $site_url . $this->getTemplatesDirectory();
 		<div class="meta">
 			<p>Client: <strong>BP</strong></p>
 			<p>Project: <strong>11-XBP-028</strong></p>
-			<p>Date: <strong>January 24, 2012</strong></p>
+      <p>Date: <strong>January 24, 2012</strong><?php echo $_SERVER['SERVER_NAME']; ?></p>
 	</header>
 
   <?=$_html;?>
