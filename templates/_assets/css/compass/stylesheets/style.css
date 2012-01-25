@@ -19,29 +19,30 @@ COLOR DEFINITIONS, VARIABLES & STYLE MIXINS
 ------------------------------------------------------------*/
 /* line 20, ../sass/style.scss */
 body {
+  overflow-y: scroll;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #444444;
   font-size: 13px;
 }
 
-/* line 25, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 strong {
   font-weight: bold;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 ::-webkit-scrollbar-track-piece {
   background-color: #fff;
   -webkit-border-radius: 0;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 33, ../sass/style.scss */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* line 36, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 ::-webkit-scrollbar-thumb {
   height: 50px;
   background-color: #999;
@@ -51,26 +52,26 @@ strong {
   border: 2px solid #fff;
 }
 
-/* line 44, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 ::-webkit-scrollbar-thumb:hover {
   height: 50px;
   background-color: #9f9f9f;
   -webkit-border-radius: 4px;
 }
 
-/* line 50, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 :-webkit-scrollbar {
   width: 16px;
 }
 
 /*----------------------------------------------------------*/
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .accessiblyHideLabels label {
   position: absolute;
   left: -9999px;
 }
 
-/* line 59, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 *:focus,
 *:target {
   outline: none;
@@ -78,54 +79,54 @@ strong {
 
 /* SECTION
 ------------------------------------------------------------*/
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 .wrapper {
   width: 1002px;
   margin: 0 auto;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 header {
   margin: 42px 21px;
 }
-/* line 71, ../sass/style.scss */
+/* line 72, ../sass/style.scss */
 header h1.logo {
   margin-bottom: 28px;
 }
-/* line 73, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 header div.meta {
   padding: 12px 0;
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
   overflow: auto;
 }
-/* line 78, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 header div.meta p {
   float: left;
   margin-right: 32px;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 .login {
   margin: 0 21px 42px;
 }
-/* line 84, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 .login h1 {
   margin-bottom: 21px;
   font-size: 32px;
   font-weight: bold;
 }
-/* line 88, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 .login form {
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
-/* line 90, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .login form label {
   font-size: 12px;
   display: block;
   margin-bottom: 3px;
 }
-/* line 94, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .login form input[type="text"], .login form input[type="password"] {
   width: 252px;
   display: block;
@@ -135,11 +136,11 @@ header div.meta p {
   outline: none;
   border: 1px solid #cccccc;
 }
-/* line 102, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 .login form input[type="text"]:focus, .login form input[type="password"]:focus {
   border: 1px solid #ee2e24;
 }
-/* line 104, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .login form input[type="submit"] {
   font-size: 16px;
   padding: 8px;
@@ -152,12 +153,12 @@ header div.meta p {
   -o-border-radious: 2px;
   cursor: pointer;
 }
-/* line 115, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .login form input[type="submit"]:hover {
   background: #d4d4d4;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .showcase .item {
   width: 292px;
   margin: 0 21px 42px;
@@ -168,43 +169,43 @@ header div.meta p {
   border-radius: 2px;
   -webkit-transition: ease-out .2s background;
 }
-/* line 128, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 .showcase .item:hover > h1 {
   color: #ee2e24;
 }
-/* line 130, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .showcase .item img {
   display: block;
   margin-bottom: 14px;
 }
-/* line 133, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .showcase .item h1 {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 8px;
   -webkit-transition: ease-out .1s color;
 }
-/* line 138, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .showcase .item p {
   margin: 0;
   line-height: 1.3;
 }
 
-/* line 142, ../sass/style.scss */
+/* line 143, ../sass/style.scss */
 .showcase-single {
   margin: 0 21px;
 }
-/* line 144, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .showcase-single h1 {
   margin-bottom: 21px;
   font-size: 32px;
   font-weight: bold;
 }
-/* line 148, ../sass/style.scss */
+/* line 149, ../sass/style.scss */
 .showcase-single .video-js-box {
   margin-bottom: 21px;
 }
-/* line 150, ../sass/style.scss */
+/* line 151, ../sass/style.scss */
 .showcase-single p {
   margin-bottom: 42px;
   padding-right: 252px;
@@ -212,7 +213,7 @@ header div.meta p {
   line-height: 1.3;
 }
 
-/* line 158, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .showcase-video video,
 .showcase-video img,
 .showcase-video object {

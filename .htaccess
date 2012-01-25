@@ -4,6 +4,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.php [QSA,L]
 
+Header set X-UA-Compatible "IE=edge"
+
 #AuthUserFile .htpasswd
 #AuthGroupFile /dev/null
 #AuthName EnterPassword
