@@ -1,12 +1,27 @@
-<div class="showcase-single showcase-image">
+<?php 
+  $review_data = $data['review'];
+  $p = $_SERVER['REQUEST_URI']; 
+  $e = explode('/', $p);
+  for ($i = 0; $i < count($review_data); $i++) {
+    if (in_array($e[count($e)-1], $review_data[$i])) {
+      $title = $review_data[$i]['title'];
+      $width = $review_data[$i]['width'];
+      $height = $review_data[$i]['height'];
+      $image = $review_data[$i]['image'];
+      $content = $review_data[$i]['content'];
+    }
+  } 
+?>
+  
+  <div class="showcase-single showcase-image" title="<?=$title;?>">
 
-  <img src="" alt="" />
+    <img src="<?=$image;?>" alt="<?=$title;?>" title="<?=$title;?>" />
 
-  <div class="content">
-    <!-- placeholder -->
+    <div class="content">
+      <?=$content;?>
+    </div>
+
   </div>
-
-</div>
 
 
 

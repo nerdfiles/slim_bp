@@ -4,6 +4,7 @@
   $e = explode('/', $p);
   for ($i = 0; $i < count($review_data); $i++) {
     if (in_array($e[count($e)-1], $review_data[$i])) {
+      $title = $review_data[$i]['title'];
       $width = $review_data[$i]['width'];
       $height = $review_data[$i]['height'];
       $vid_src = $review_data[$i]['vid_url'];
@@ -13,7 +14,7 @@
   } 
 ?>
 
-<div class="showcase-single showcase-video">
+<div class="showcase-single showcase-video" title="<?=$title;?>">
 
   <div class="video-js-box"><!-- Begin VideoJS -->
 
@@ -24,6 +25,7 @@
       width="<?=$width;?>" 
       height="<?=$height;?>" 
       poster="<?=$poster_src;?>" 
+      title="<?=$title;?>"
       data-setup="{}">
       
         <source src="<?=$vid_src;?>" type='video/mp4' />
