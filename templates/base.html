@@ -82,7 +82,7 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-1.7-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest -->
 
-<!--script src="http://code.jquery.com/ui/1.8.15/jquery-ui.js"></script>
+<!--script src="http://code.jquery.com/ui/1.8.16/jquery-ui.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-ui-1.8.16-min.js"><\/script>')</script-->
 <!-- ☑ make sure we have the latest, ☑ are we really using jQuery UI -->
 <!-- ================================================================== -->
@@ -105,6 +105,19 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
           var p = window.location.pathname.split('/'); // array('slim_bp', 'review', 'something-special-3')
           var l = (p.length-1); // get last element of array p
 
+          $('video')
+            .prop('width', '960')
+            .prop('height', '540');
+
+
+          $('video').find('object')
+            .prop('width', '960')
+            .prop('height', '540');
+
+          $('video').find('img')
+            .prop('width', '960')
+            .prop('height', '540');
+
           $.getJSON('../../data/bp_review.json', function(data) {
 
             var arr = data['review'];
@@ -116,21 +129,13 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
             $('.content').html(a[0]['content']);
 
             $('video')
-              .prop('width', '960')
-              .prop('height', '540')
               .prop('src', a[0]['vid_url'])
               .prop('poster', a[0]['vid_poster_url']);
 
             $('video').find('source')
               .prop('src', a[0]['vid_url']);
 
-            $('video').find('object')
-              .prop('width', '960')
-              .prop('height', '540');
-
             $('video').find('img')
-              .prop('width', '960')
-              .prop('height', '540')
               .prop('src', a[0]['vid_poster_url']);
           });
 
