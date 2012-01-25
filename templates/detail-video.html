@@ -14,9 +14,9 @@
   } 
 ?>
 
-<div class="showcase-single showcase-video" title="<?=$title;?>">
+<section class="showcase-single showcase-video" title="<?=$title;?>">
 
-  <div class="video-js-box"><!-- Begin VideoJS -->
+  <figure class="video-js-box"><!-- Begin VideoJS -->
 
     <video 
       id="video_sample" 
@@ -59,13 +59,13 @@
 
     </video>
 
-  </div><!-- End VideoJS -->
+    <figcaption class="content">
+      <?=$content;?>
+    </figcaption>
 
-  <div class="content">
-    <?=$content;?>
-  </div>
+  </figure><!-- End VideoJS -->
 
-</div>
+</section>
 
 
 

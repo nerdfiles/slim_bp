@@ -13,16 +13,22 @@
   } 
 ?>
   
-  <div class="showcase-single showcase-image" title="<?=$title;?>">
+<section 
+  class="showcase-single showcase-image" 
+  title="<?=$title;?>">
 
-    <img src="<?=$image;?>" alt="<?=$title;?>" title="<?=$title;?>" />
+  <figure>
 
-    <div class="content">
+    <img 
+      src="<?=$image;?>" 
+      alt="<?=$title;?>" 
+      title="<?=$title;?>" />
+
+    <figcaption class="content">
       <?=$content;?>
-    </div>
+    </figcaption>
 
-  </div>
+  </figure>
 
-
-
+</section>
 
