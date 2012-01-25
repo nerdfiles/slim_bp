@@ -2,16 +2,17 @@
   $review_data = $data['review'];
   $p = $_SERVER['REQUEST_URI']; 
   $e = explode('/', $p);
-  
+  print_r($review_data);
   for ($i = 0; $i < count($review_data); $i++) {
-    if (in_array("$e[4]", $review_data[$i])) {
+    if (in_array($e[4], $review_data[$i])) {
       $width = $review_data[$i]['width'];
       $height = $review_data[$i]['height'];
       $vid_src = $review_data[$i]['vid_url'];
       $poster_src = $review_data[$i]['vid_poster_url'];
       $content = $review_data[$i]['content'];
-  ?>
-
+    }
+  } 
+?>
 
 <div class="showcase-single showcase-video">
 
@@ -65,8 +66,5 @@
 </div>
 
 
-  <?
-    }
-  } 
-?>
+
 
