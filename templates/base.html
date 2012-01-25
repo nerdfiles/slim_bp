@@ -9,7 +9,7 @@ $port = ($_SERVER['SERVER_PORT'] != '80') ? (':' . $_SERVER['SERVER_PORT']) : ''
 $sep = '/';
 
 // project vars
-$project = 'slim_bp';
+$project = 'clients/bp/d7';
 $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this->getTemplatesDirectory(); 
 
 ?>
@@ -29,7 +29,7 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 	<!-- =================================================================== -->
 	
 	<!-- METADATA + VIEWPORT =============================================== -->
-  <title>Showcaser</title>
+  <title>Pennebaker Client Review</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- ================================================================= -->
 	
@@ -62,8 +62,8 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 		<h1 class="logo"><img src="<?=$templates;?>/_assets/img/pennebaker.png" alt="Pennebaker"></h1>
 		<div class="meta">
 			<p>Client: <strong>BP</strong></p>
-			<p>Project: <strong>Lorem Ipsum</strong></p>
-			<p>Date: <strong>January 19, 2012</strong></p>
+			<p>Project: <strong>11-XBP-028</strong></p>
+			<p>Date: <strong>January 24, 2012</strong></p>
 	</header>
 
   <?=$_html;?>
@@ -75,11 +75,11 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <!-- SCRIPTS ========================================================== -->
 
 <!-- JQUERY =========================================================== -->
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-1.7.1-min.js"><\/script>')</script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-1.7-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest -->
 
-<script src="http://code.jquery.com/ui/1.8.16/jquery-ui.js"></script>
+<script src="http://code.jquery.com/ui/1.8.15/jquery-ui.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-ui-1.8.16-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest, ☑ are we really using jQuery UI -->
 <!-- ================================================================== -->
@@ -107,7 +107,7 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
           var p = window.location.pathname.split('/'); // array('slim_bp', 'review', 'something-special-3')
           var l = (p.length-1); // get last element of array p
 
-          $.getJSON('../data/bp_review.json', function(data) {
+          $.getJSON('../../data/bp_review.json', function(data) {
 
             var arr = data['review'];
 
@@ -116,9 +116,7 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
             });
 
             $('.content').html(a[0]['content']);
-
-            // console.log(a);
-
+            
           });
 
           //$('.showcase-single').fadeOut().fadeIn();

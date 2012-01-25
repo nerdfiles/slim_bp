@@ -8,6 +8,6 @@ RewriteRule ^(.*)$ index.php [QSA,L]
 #AuthGroupFile /dev/null
 #AuthName EnterPassword
 #AuthType Basic
-#require user bppennebaker
+#require user deepwaterbp
 
 
