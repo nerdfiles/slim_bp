@@ -87,10 +87,6 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <!-- ☑ make sure we have the latest, ☑ are we really using jQuery UI -->
 <!-- ================================================================== -->
 
-<!-- SELECTIVIZR ====================================================== -->
-<script src="<?=$templates;?>/_assets/js/libs/selectivizr-min.js"></script>
-<!-- ================================================================== -->
-
 <script>
   ;(function($) {
     $(function() {
@@ -118,23 +114,24 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
             });
 
             $('.content').html(a[0]['content']);
+
             $('video')
-              .attr('width', '960')
-              .attr('height', '540')
-              .attr('src', a[0]['vid_url'])
-              .attr('poster', a[0]['vid_poster_url']);
+              .prop('width', '960')
+              .prop('height', '540')
+              .prop('src', a[0]['vid_url'])
+              .prop('poster', a[0]['vid_poster_url']);
 
-            $('video object')
-              .attr('width', '960')
-              .attr('height', '540');
+            $('video').find('source')
+              .prop('src', a[0]['vid_url']);
 
-            $('video source')
-              .attr('src', a[0]['vid_url']);
+            $('video').find('object')
+              .prop('width', '960')
+              .prop('height', '540');
 
-            $('video img')
-              .attr('width', '960')
-              .attr('height', '540')
-              .attr('src', a[0]['vid_poster_url']);
+            $('video').find('img')
+              .prop('width', '960')
+              .prop('height', '540')
+              .prop('src', a[0]['vid_poster_url']);
           });
 
         } // End if
@@ -146,6 +143,10 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
     });
   })(jQuery);
 </script>
+
+<!-- SELECTIVIZR ====================================================== -->
+<script src="<?=$templates;?>/_assets/js/libs/selectivizr-min.js"></script>
+<!-- ================================================================== -->
 
 <!-- ================================================================== -->
 

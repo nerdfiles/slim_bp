@@ -178,4 +178,12 @@ header div.meta p {
   line-height: 1.3;
 }
 
+/* line 131, ../sass/style.scss */
+.showcase-video video,
+.showcase-video img,
+.showcase-video object {
+  width: 960px !important;
+  height: 540px !important;
+}
+
 /*----------------------------------------------------------*/

@@ -126,4 +126,9 @@ header{
 		font-size: 16px;
 		line-height: 1.3; } }
 
+.showcase-video video,
+.showcase-video img,
+.showcase-video object { width: 960px !important; height: 540px !important; }
+.showcase-image { }
+
 /*----------------------------------------------------------*/
