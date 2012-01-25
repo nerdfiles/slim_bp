@@ -106,17 +106,16 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
           var l = (p.length-1); // get last element of array p
 
           $('video')
-            .prop('width', '960')
-            .prop('height', '540');
-
+            .attr('width', '960')
+            .attr('height', '540');
 
           $('video').find('object')
-            .prop('width', '960')
-            .prop('height', '540');
+            .attr('width', '960')
+            .attr('height', '540');
 
           $('video').find('img')
-            .prop('width', '960')
-            .prop('height', '540');
+            .attr('width', '960')
+            .attr('height', '540');
 
           $.getJSON('../../data/bp_review.json', function(data) {
 
