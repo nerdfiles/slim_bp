@@ -94,16 +94,15 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <script>
   ;(function($) {
     $(function() {
-      //console.log('showcase-single');
       var Review = {};
 
       Review.init = function() {
-        this.showcase_single();
+        this.showcase_video();
       };
 
-      Review.showcase_single = function() {
+      Review.showcase_video = function() {
         
-        var $elem = $('.showcase-single');
+        var $elem = $('.showcase-video');
         
         if ( $elem.length ) {
           
@@ -124,8 +123,6 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
               .attr('poster', a[0]['vid_poster_url']);
 
           });
-
-          //$('.showcase-single').fadeOut().fadeIn();
 
         } // End if
 

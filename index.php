@@ -187,11 +187,11 @@ function recall_template() {
   })->name('review');
 
   $app->get('/review/video/:itemname', $authUser('review'), function($itemname) use ($app) {
-    $app->render('detail.html');
+    $app->render('detail-video.html');
   });
   
   $app->get('/review/image/:itemname', $authUser('review'), function($itemname) use ($app) {
-    $app->render('detail.html');
+    $app->render('detail-image.html');
   });
 
   /*
