@@ -4,10 +4,25 @@
     <?php for ($i = 0; $i < count($review_data); $i++) { ?>
     <?php $slug = $review_data[$i]['slug']; ?>
     <?php $type = $review_data[$i]['type']; ?>
+    <?php $title = $review_data[$i]['title']; ?>
+    <?php $thumbnail = $review_data[$i]['thumbnail']; ?>
+    <?php $thumbnail_caption = $review_data[$i]['thumbnail_caption']; ?>
     <a href="./<?=$type;?>/<?=$slug;?>" class="item">
-			<img src="http://mt.pennebaker.com/clients/bp/d7/templates/_assets/img/filler-block.jpg">
-			<h1>Scene00: Title</h1>
-			<p>Status: in production</p>
+      
+      <?php if ($thumbnail): ?>
+        <img src="<?=$thumbnail;?>" alt="<?php if ($thumbnail_caption): ?>
+        <?=$thumbnail_caption;?>
+        <?php endif; ?>" />
+      <?php else: ?>
+        <img src="http://mt.pennebaker.com/clients/bp/d7/templates/_assets/img/filler-block.jpg" alt="" />
+      <?php endif; ?>
+
+      <h1><?=$title;?></h1>
+      
+      <?php if ($thumbnail_caption): ?>
+        <p><?=$thumbnail_caption;?></p>
+      <?php endif; ?>
+
 		</a>
     <?php } ?>
 

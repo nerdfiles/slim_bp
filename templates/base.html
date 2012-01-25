@@ -10,6 +10,9 @@ $sep = '/';
 
 // project vars
 $project = 'clients/bp/d7';
+if ( $addr == '127.0.0.1') {
+  $project = 'slim_bp';
+}
 $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this->getTemplatesDirectory(); 
 
 ?>
@@ -116,7 +119,10 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
             });
 
             $('.content').html(a[0]['content']);
-            
+            $('video')
+              .attr('src', a[0]['vid_url'])
+              .attr('poster', a[0]['vid_poster_url']);
+
           });
 
           //$('.showcase-single').fadeOut().fadeIn();
