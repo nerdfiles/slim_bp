@@ -1,0 +1,173 @@
+{
+  "review": [
+  	{
+      "type": "video",  	
+      "title": "Full Edit: Version 2",
+      "slug": "d7-video-edit",
+      "pubdate": "01-27-2012",
+      "vid_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/videos/sc13sh02-web.mp4",
+      "vid_poster_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/images/sc13-poster.jpg",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
+      "thumbnail_caption": ""
+  	},
+    {
+      "type": "video",
+      "title": "Scene 01: The next big challenge",
+      "slug": "sc01",
+      "pubdate": "01-24-2012",
+      "thumbnail": "",
+      "vid_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/videos/sc10sh01-web.mp4",
+      "vid_poster_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/images/sc10-poster.jpg",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Original animated sequence<br /><strong>Responsible:</strong> Pennebaker<br /><strong>Status:</strong> in production, photos already provided by bp</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 02: Waterflooding breakthrough",
+      "slug": "sc02",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need molecular shot in higher resolution without text</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 03: Seismic Imaging",
+      "slug": "sc03",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "video",
+      "title": "Scene 04: HPHT and Thunderhorse",
+      "slug": "sc04",
+      "pubdate": "01-24-2012",
+      "thumbnail": "",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Original animated sequence<br /><strong>Responsible:</strong> Pennebaker<br /><strong>Status:</strong> in production, photos already provided by bp</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 05: Paleogene",
+      "slug": "sc05",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need molecular shot in higher resolution without text</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 06: Future frontier",
+      "slug": "sc06",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 07: GOM Incident",
+      "slug": "sc07",
+      "pubdate": "01-24-2012",
+      "thumbnail": "",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Original animated sequence<br /><strong>Responsible:</strong> Pennebaker<br /><strong>Status:</strong> in production, photos already provided by bp</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "video",
+      "title": "Scene 08: Deepwater basins",
+      "slug": "sc08",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need molecular shot in higher resolution without text</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 09: 20K™ reveal",
+      "slug": "sc09",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "video",
+      "title": "Scene 10: Greater than 15ksi challenge",
+      "slug": "sc10",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "image",
+      "title": "Scene 11: Global team",
+      "slug": "sc11",
+      "pubdate": "01-24-2012",
+      "thumbnail": "",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Original animated sequence<br /><strong>Responsible:</strong> Pennebaker<br /><strong>Status:</strong> in production, photos already provided by bp</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "video",
+      "title": "Scene 12: 20K™ technology",
+      "slug": "sc12",
+      "pubdate": "01-24-2012",
+      "vid_url": "",
+      "vid_poster_url": "",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need molecular shot in higher resolution without text</p>",
+      "thumbnail_caption": ""
+    },
+    {
+      "type": "video",
+      "title": "Scene 13: Ending",
+      "slug": "sc13",
+      "pubdate": "01-24-2012",
+      "vid_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/videos/sc13sh02-web.mp4",
+      "vid_poster_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/images/sc13-poster.jpg",
+      "thumbnail": "",
+      "image": "",
+      "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
+      "thumbnail_caption": ""
+    }
+  ]
+}
+
