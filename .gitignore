@@ -1,1 +1,3 @@
 .htaccess-cp
+*.swp
+*.swo
