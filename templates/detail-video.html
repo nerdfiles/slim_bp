@@ -1,3 +1,19 @@
+<?php 
+  $review_data = $data['review'];
+  $p = $_SERVER['REQUEST_URI']; 
+  $e = explode('/', $p);
+  
+  for ($i = 0; $i < count($review_data); $i++) {
+    if (in_array($e[4], $review_data[$i])) {
+      $width = $review_data[$i]['width'];
+      $height = $review_data[$i]['height'];
+      $vid_src = $review_data[$i]['vid_url'];
+      $poster_src = $review_data[$i]['vid_poster_url'];
+      $content = $review_data[$i]['content'];
+    }
+  } 
+?>
+
 <div class="showcase-single showcase-video">
 
   <div class="video-js-box"><!-- Begin VideoJS -->
@@ -6,17 +22,18 @@
       class="video-js vjs-default-skin" 
       controls 
       preload="none" 
-      width="" 
-      height="" 
-      poster="" 
+      width="<?php echo $width; ?>" 
+      height="<?php echo $height; ?>" 
+      poster="<?php echo $poster_src; ?>" 
       data-setup="{}">
       
-        <source src="" type='video/mp4' />
+        <source src="<?php echo $vid_src; ?>" type='video/mp4' />
 
         <object 
           id="flash_fallback_1" 
           class="vjs-flash-fallback" 
-          width="" height="" 
+          width="<?php echo $width; ?>" 
+          height="<?php echo $height; ?>" 
           type="application/x-shockwave-flash" 
           data="http://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
 
@@ -28,11 +45,11 @@
               value="true" />
             <param 
               name="flashvars" 
-              value='config={"playlist":["", {"url": "","autoPlay":false,"autoBuffering":true}]}' />
+              value='config={"playlist":["<?php echo $vid_src; ?>", {"url": "<?php echo $vid_src; ?>","autoPlay":false,"autoBuffering":true}]}' />
             <img 
-              src="" 
-              width="" 
-              height="" 
+              src="<?php echo $poster_src; ?>" 
+              width="<?php echo $width; ?>" 
+              height="<?php echo $height; ?>" 
               alt="Poster Image" 
               title="No video playback capabilities." />
 
@@ -43,7 +60,7 @@
   </div><!-- End VideoJS -->
 
   <div class="content">
-    <!-- placeholder -->
+    <?php echo $content; ?>
   </div>
 
 </div>

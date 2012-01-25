@@ -10,7 +10,9 @@
       "thumbnail": "",
       "image": "",
       "content": "<p><strong>Visuals:</strong> Produced animated sequence and video footage<br /><strong>Responsible:</strong> bp<br /><strong>Status:</strong> need node animation footage without text, data center shot in higher quality</p>",
-      "thumbnail_caption": ""
+      "thumbnail_caption": "",
+      "width": "960",
+      "height": "540"
   	},
     {
       "type": "video",
@@ -22,7 +24,9 @@
       "vid_poster_url": "http://mt.pennebaker.com/clients/bp/d7/templates/_assets/previews/images/sc10-poster.jpg",
       "image": "",
       "content": "<p><strong>Visuals:</strong> Original animated sequence<br /><strong>Responsible:</strong> Pennebaker<br /><strong>Status:</strong> in production, photos already provided by bp</p>",
-      "thumbnail_caption": ""
+      "thumbnail_caption": "",
+      "width": "960",
+      "height": "540"
     }
   ]
 }
