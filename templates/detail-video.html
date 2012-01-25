@@ -1,9 +1,4 @@
 <?php 
-  global $width;
-  global $height;
-  global $vid_src;
-  global $poster_src;
-  global $content;
   $review_data = $data['review'];
   $p = $_SERVER['REQUEST_URI']; 
   $e = explode('/', $p);
@@ -15,9 +10,8 @@
       $vid_src = $review_data[$i]['vid_url'];
       $poster_src = $review_data[$i]['vid_poster_url'];
       $content = $review_data[$i]['content'];
-    }
-  } 
-?>
+  ?>
+
 
 <div class="showcase-single showcase-video">
 
@@ -71,5 +65,8 @@
 </div>
 
 
-
+  <?
+    }
+  } 
+?>
 
