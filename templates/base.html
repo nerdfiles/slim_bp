@@ -13,7 +13,9 @@ $project = 'clients/bp/d7';
 if ( $addr == '127.0.0.1') {
   $project = 'slim_bp';
 }
-$templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this->getTemplatesDirectory(); 
+
+$site_url = $protocol . '://' . $addr . $port . $sep . $project . $sep;
+$templates = $site_url . $this->getTemplatesDirectory(); 
 
 ?>
 
@@ -72,7 +74,7 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <div class="wrapper"> <!-- START WRAPPER -->
 
 	<header>
-		<h1 class="logo"><img src="<?=$templates;?>/_assets/img/pennebaker.png" alt="Pennebaker"></h1>
+    <h1 class="logo"><a href="<?=$site_url;?>review/"><img src="<?=$templates;?>/_assets/img/pennebaker.png" alt="Pennebaker"></a></h1>
 		<div class="meta">
 			<p>Client: <strong>BP</strong></p>
 			<p>Project: <strong>11-XBP-028</strong></p>
