@@ -1,20 +1,53 @@
-<div class="login">
+<section class="login">
 
-  <h1>Log in</h1>
+  <header>
+    <h1>Log in</h1>
+  </header>
 
   <form
     action="."
     method="post"
-    tabindex="1"
     class="accessiblyHideLabels">
 
-		<label for="username" title="Please provide your given username">Username</label>	
-		<input id="username" name="username" type="text" placeholder="Username" />
-		<label for="password" title="Please provide a password">Password</label>
-		<input id="password" name="password" type="password" placeholder="Password" />
-    <input type="submit" value="Log In" />
+    <fieldset>
+
+      <legend>Log in to review</legend>
+
+      <label 
+        for="username" 
+        title="Please provide your given username">
+        Username
+      </label>	
+
+      <input 
+        id="username" 
+        name="username" 
+        type="text" 
+        tabindex="1"
+        placeholder="Username" />
+
+      <label 
+        for="password" 
+        title="Please provide a password">
+        Password
+      </label>
+
+      <input 
+        id="password" 
+        name="password" 
+        type="password" 
+        tabindex="2"
+        placeholder="Password" />
+
+      <button
+        type="submit" 
+        value="Log In">
+        Log In
+      </button>
+
+    </fieldset>
 
 	</form>
 	
-</div>
+</section>
 
