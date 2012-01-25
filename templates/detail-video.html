@@ -2,7 +2,8 @@
   $review_data = $data['review'];
   $p = $_SERVER['REQUEST_URI']; 
   $e = explode('/', $p);
-  print_r($review_data);
+  print_r($p);
+  //print_r($review_data);
   for ($i = 0; $i < count($review_data); $i++) {
     if (in_array($e[4], $review_data[$i])) {
       $width = $review_data[$i]['width'];
