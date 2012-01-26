@@ -186,13 +186,13 @@ function recall_template() {
     $app->render('index.html', array( 'data' => $data ));
   })->name('review');
 
-  $app->get('/review/video/:itemname', $authUser('review'), function($itemname) use ($app) {
+  $app->get('/review/video/:itemname/', $authUser('review'), function($itemname) use ($app) {
     $json_data = file_get_contents('./data/bp_review.json');
     $data = json_decode($json_data, true);
     $app->render('detail-video.html', array( 'data' => $data ));
   });
   
-  $app->get('/review/image/:itemname', $authUser('review'), function($itemname) use ($app) {
+  $app->get('/review/image/:itemname/', $authUser('review'), function($itemname) use ($app) {
     $json_data = file_get_contents('./data/bp_review.json');
     $data = json_decode($json_data, true);
     $app->render('detail-image.html', array( 'data' => $data ));
