@@ -244,7 +244,7 @@ header .meta dd {
   -webkit-transition: ease-out .2s background;
 }
 /* line 152, ../sass/style.scss */
-.showcase .item:hover > h1 {
+.showcase .item:hover h1 {
   color: #ee2e24;
 }
 /* line 154, ../sass/style.scss */

@@ -149,7 +149,7 @@ header{
 		text-decoration: none;
 		border-radius: 2px;
 		-webkit-transition: ease-out .2s background;
-		&:hover > h1{
+		&:hover h1{
 			color: $red; }
 		img{
 			display: block; 
