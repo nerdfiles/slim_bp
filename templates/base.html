@@ -29,7 +29,7 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 	<!-- =================================================================== -->
 	
 	<!-- METADATA + VIEWPORT =============================================== -->
-  <title>TITLE HERE</title>
+  <title>Showcaser</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- ================================================================= -->
 	
@@ -75,11 +75,11 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <!-- SCRIPTS ========================================================== -->
 
 <!-- JQUERY =========================================================== -->
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-1.7-min.js"><\/script>')</script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-1.7.1-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest -->
 
-<script src="http://code.jquery.com/ui/1.8.15/jquery-ui.js"></script>
+<script src="http://code.jquery.com/ui/1.8.16/jquery-ui.js"></script>
 <script>window.jQuery || document.write('<script src="<?=$templates;?>/_assets/js/libs/jquery-ui-1.8.16-min.js"><\/script>')</script>
 <!-- ☑ make sure we have the latest, ☑ are we really using jQuery UI -->
 <!-- ================================================================== -->
@@ -87,6 +87,51 @@ $templates = $protocol . '://' . $addr . $port . $sep . $project . $sep . $this-
 <!-- SELECTIVIZR ====================================================== -->
 <script src="<?=$templates;?>/_assets/js/libs/selectivizr-min.js"></script>
 <!-- ================================================================== -->
+
+<script>
+  ;(function($) {
+    $(function() {
+      //console.log('showcase-single');
+      var Review = {};
+
+      Review.init = function() {
+        this.showcase_single();
+      };
+
+      Review.showcase_single = function() {
+        
+        var $elem = $('.showcase-single');
+        
+        if ( $elem.length ) {
+          
+          var p = window.location.pathname.split('/'); // array('slim_bp', 'review', 'something-special-3')
+          var l = (p.length-1); // get last element of array p
+
+          $.getJSON('../data/bp_review.json', function(data) {
+
+            var arr = data['review'];
+
+            var a = jQuery.grep(arr, function(n, i) {
+              return n.slug == p[l];
+            });
+
+            $('.content').html(a[0]['content']);
+
+            // console.log(a);
+
+          });
+
+          //$('.showcase-single').fadeOut().fadeIn();
+
+        } // End if
+
+      };
+
+      Review.init();
+    
+    });
+  })(jQuery);
+</script>
 
 <!-- ================================================================== -->
 

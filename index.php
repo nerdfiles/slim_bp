@@ -40,7 +40,7 @@ require 'views/index.php';
 // view init
 $index_view = new Index_View();
 // set base layout
-$index_view::set_layout('base.html');
+$index_view->set_layout('base.html');
 
 // End BASE VIEW
 
@@ -63,7 +63,7 @@ $app = new Slim(array(
 ));
 
 // set name
-$app->setName('reviewApp');
+//$app->setName('reviewApp');
 
 // End SLIM INIT
 
@@ -74,7 +74,7 @@ $app->setName('reviewApp');
  *
  * ==============================================*/
 
-  $app->configureMode('prod', function () use ($app) {
+  $app->configureMode('prod', function() use ($app) {
     $app->config(array(
       'log.enable' => true,
       'log.path' => '../logs',
@@ -82,7 +82,7 @@ $app->setName('reviewApp');
     ));
   });
 
-  $app->configureMode('dev', function () use ($app) {
+  $app->configureMode('dev', function() use ($app) {
     $app->config(array(
       'log.enable' => false,
       'debug' => true
@@ -144,7 +144,7 @@ function recall_template() {
  * ==============================================*/
 
   $app->map('/', function () use ($app) {
-
+    
     if ( $app->request()->isPost() && sizeof($app->request()->post()) == 2 ) {
       
       // if valid login, set auth cookie and redirect
@@ -152,8 +152,10 @@ function recall_template() {
 
       $post = (object)$app->request()->post();
 
-      if ( isset($post->username) && isset($post->password) && sha1($post->password) == $testp ) {
-        $app->setEncryptedCookie('bppasscook', $post->password, 0);
+      if ( isset($post->username) && isset($post->password) && sha1($post->password) == $testp && $post->username == 'bppenne' ) {
+        //$app->setEncryptedCookie('bppasscook', $post->password, 0);
+        $app->setCookie('user_cook', $post->username, 0);
+        $app->setCookie('pass_cook', $post->password, 0);
         $app->redirect('./review');
       } else {
         $app->redirect('.');
@@ -165,23 +167,26 @@ function recall_template() {
 
   })->via('GET', 'POST')->name('login');
 
-  $authUser = function( $role = 'member') {
+  $authUser = function( $role = 'member') use ($app) {
     return function () use ( $role ) {
-      $app = Slim::getInstance('reviewApp');
+      $app = Slim::getInstance();
       
-      echo $app->getEncryptedCookie('bppasscook', false);
       // Check for password in the cookie
-      if ( $app->getEncryptedCookie('bppasscook', false) != 'uAX8+Tdv23/3YQ==' ) {
-        //$app->redirect('..');
+      if ( $app->getCookie('pass_cook') != 'uAX8+Tdv23/3YQ==' || $app->getCookie('user_cook') != 'bppenne' ) {
+      //if ( $app->getEncryptedCookie('bppasscook', false) != 'uAX8+Tdv23/3YQ==') {
+        $app->redirect('..');
+        //$app->redirect('review');
       }
     };
   };
 
-  $app->get('/review/', $authUser('admin'), function() use ($app) {
-    $app->render('index.html');
-  })->name('admin');
+  $app->get('/review/', $authUser('review'), function() use ($app) {
+    $json_data = file_get_contents('./data/bp_review.json');
+    $data = json_decode($json_data, true);
+    $app->render('index.html', array( 'data' => $data ));
+  })->name('review');
 
-  $app->get('/detail/:itemname', function() use ($app) {
+  $app->get('/review/:itemname', $authUser('review'), function($itemname) use ($app) {
     $app->render('detail.html');
   });
 
