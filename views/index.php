@@ -4,7 +4,6 @@ class Index_View extends Slim_View {
   public static function set_layout($layout=NULL) {
     self::$_layout = $layout;
   }
-
   public function render( $template ) {
     extract($this->data);
     $templatePath = $this->getTemplatesDirectory() . '/' . ltrim($template, '/');
